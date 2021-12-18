@@ -23,7 +23,8 @@ def _extract_data():
     user_idx = [x for x in range(1, 23)]
     for idx in user_idx:
         pth = 'data/DataPaper/user_' + str(idx) + '/Actigraph.csv'
-    # _clean_df('data/DataPaper/user_1/Actigraph.csv')
+        _clean_df(pth, idx)
 
 
 _extract_data()
+# _clean_df('data/DataPaper/user_1/Actigraph.csv', 1)
