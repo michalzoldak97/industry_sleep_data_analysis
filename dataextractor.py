@@ -93,6 +93,3 @@ def _add_state_auto():
         data_df['activity'] = activity
         new_d_pth = 'data/userData/' + str(idx) + '_1.csv'
         data_df.to_csv(new_d_pth, index=False)
-
-
-_add_state_auto()
