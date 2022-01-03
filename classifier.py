@@ -75,11 +75,12 @@ def classify():
     x_set = [el[:3] for el in sleep_data]
     y_set = [el[3] for el in sleep_data]
     x_train, x_test, y_train, y_test = train_test_split(x_set, y_set, test_size=.2, random_state=21)
-    classifier = RandomForestClassifier(n_estimators=100, n_jobs=-1, max_depth=25, criterion='gini', random_state=21)
-    classifier.fit(x_train, y_train)
+    classifier = joblib.load('classifiers/rf_one.joblib')
+    # classifier = RandomForestClassifier(n_estimators=100, n_jobs=-1, max_depth=25, criterion='gini', random_state=21)
+    # classifier.fit(x_train, y_train)
     y_pred = classifier.predict(x_test)
     _calc_acc(y_pred, y_test)
-    joblib.dump(classifier, 'classifiers/rf_one.joblib', compress=3)
+    # joblib.dump(classifier, 'classifiers/rf_one.joblib', compress=3)
 
 
 classify()

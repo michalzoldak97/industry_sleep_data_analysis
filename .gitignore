@@ -1,3 +1,4 @@
 data/
 .idea/
 classifiers/
+__pycache__/
