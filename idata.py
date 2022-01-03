@@ -81,5 +81,3 @@ def upload_user_data():
             print(req)
             time.sleep(.1)
 
-
-upload_user_data()
